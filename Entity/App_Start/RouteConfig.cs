@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Point_of_Sale_MVC_Schema_First
+namespace Entity
 {
     public class RouteConfig
     {
@@ -16,7 +16,7 @@ namespace Point_of_Sale_MVC_Schema_First
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "TestCustomers", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

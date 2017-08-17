@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C979EE98-FC70-4D8F-8EB5-D3B5E4AE45E2}</ProjectGuid>
+    <ProjectGuid>{0381C037-9890-4CA6-B525-8746DD3FBF93}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Point_of_Sale_MVC_Schema_First</RootNamespace>
-    <AssemblyName>Point of Sale MVC Schema First</AssemblyName>
+    <RootNamespace>Entity</RootNamespace>
+    <AssemblyName>Entity</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -43,14 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -84,8 +76,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -128,111 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Models\POSDBContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>POSDBContext.edmx</DependentUpon>
-      <LastGenOutput>POSDBContext.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\POSDBContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>POSDBContext.edmx</DependentUpon>
-      <LastGenOutput>POSDBContext.cs</LastGenOutput>
-    </Content>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Customer\Index.cshtml" />
-    <Content Include="Views\Customer\Details.cshtml" />
-    <Content Include="Views\Customer\Edit.cshtml" />
-    <Content Include="Views\Customer\Delete.cshtml" />
-    <Content Include="Views\TestCustomers\Create.cshtml" />
-    <Content Include="Views\TestCustomers\Delete.cshtml" />
-    <Content Include="Views\TestCustomers\Details.cshtml" />
-    <Content Include="Views\TestCustomers\Edit.cshtml" />
-    <Content Include="Views\TestCustomers\Index.cshtml" />
-    <Content Include="Views\Customer\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\TestCustomersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Address.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Barcode.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Customer.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Customer_Sale.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employee.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Free_Product.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Gift.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Journal.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Journal_Details.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Login.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Main_Accounts.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Payment.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\POSDBContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POSDBContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\POSDBContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\POSDBContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POSDBContext.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Product.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Product_Supplier.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Sale.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Sub_Accounts.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Supplier.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Support.cs">
-      <DependentUpon>POSDBContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -242,14 +133,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\POSDBContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>POSDBContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\POSDBContext.edmx.diagram">
-      <DependentUpon>POSDBContext.edmx</DependentUpon>
-    </Content>
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -259,9 +142,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -276,9 +158,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>8795</DevelopmentServerPort>
+          <DevelopmentServerPort>9098</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8795/</IISUrl>
+          <IISUrl>http://localhost:9098/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
